@@ -13,6 +13,10 @@ function Users() {
   return <h2>Users</h2>;
 }
 
+function Fancy() {
+  return <h2>Fancy New Tab</h2>;
+}
+
 export default function App() {
   return (
     <Router>
@@ -28,10 +32,16 @@ export default function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/fancy">Fancy</Link>
+            </li>
           </ul>
         </nav>
 
         <Switch>
+          <Route path="/fancy">
+            <Fancy />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
